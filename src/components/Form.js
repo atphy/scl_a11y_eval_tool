@@ -33,12 +33,15 @@ export default class SearchForm extends Component {
           <ControlLabel>API Key</ControlLabel>
           <FormControl
             type="text"
-            placeholder="Ender API Key"
+            placeholder="Enter API Key"
             id="formApiKey"
             name="api"
             inputRef={(input) => this.api = input}
           />
         </FormGroup>
+        <FormGroup>
+      		<FormControl.Static>The first time you run a report, it will show that you have 0 credits. Once you have run the first report, it will show the correct number of credits.</FormControl.Static>
+    	</FormGroup>
         <FormGroup controlId="formCreditSelect">
           <ControlLabel>Credits ({this.props.credits} remaining)</ControlLabel>
             <FormControl
@@ -52,6 +55,9 @@ export default class SearchForm extends Component {
             <option value="2">Summary and Detail (2 credits)</option>
           </FormControl>
         </FormGroup>
+        <FormGroup>
+      		<FormControl.Static>When entering URLs, do not put "http://" in front of them as the output links will be broken.</FormControl.Static>
+    	</FormGroup>
         <FormGroup controlId="formURLs">
           <ControlLabel>Websites</ControlLabel>
           <FormControl
