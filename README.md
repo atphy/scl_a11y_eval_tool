@@ -5,7 +5,6 @@ A demo of this tool can be found at https://libtools.smith.edu/development/acces
 
 ## Installation
 1. Clone this repository
-2. Confirm that all dependencies are installed as described in [package.json](package.json).
 2. Yarn install
 3. Yarn start
 
