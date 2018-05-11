@@ -12,8 +12,7 @@
     "react": "^16.3.2",
     "react-bootstrap": "^0.32.1",
     "react-csv": "^1.0.14",
-    "react-dom": "^16.3.2",
-    "yarn": "^1.6.0"
+    "react-dom": "^16.3.2"
   },
   "devDependencies": {
     "react-scripts": "^1.0.17"
