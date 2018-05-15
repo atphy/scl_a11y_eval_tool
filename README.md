@@ -5,8 +5,12 @@ A demo of this tool can be found at https://libtools.smith.edu/development/acces
 
 ## Installation
 1. Clone this repository
-2. Yarn install
-3. Yarn start
+2. Make sure to have [Yarn](https://yarnpkg.com/en/) installed.
+3. In command line, go to the repository folder and run:
+```
+yarn install
+yarn start
+```
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 You can [find the most recent version of the React guide here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).

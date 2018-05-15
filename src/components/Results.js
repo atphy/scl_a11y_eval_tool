@@ -5,10 +5,11 @@ export default class Results extends Component {
 
   renderDisplay = (key) => {
     const data = this.props.data[key]
+    var waveurlencoded = "http://wave.webaim.org/report#/" + encodeURIComponent(data.statistics.pageurl);
     return(
     <tr key={key}>
       <td className="col-md-3 page-url-column">
-        <a href={data.statistics.waveurl} target="_blank">{data.statistics.pageurl}</a>
+        <a href={waveurlencoded} target="_blank">{data.statistics.pageurl}</a>
       </td>
       <td>{data.categories.error.count}</td>
       <td>{data.categories.alert.count}</td>

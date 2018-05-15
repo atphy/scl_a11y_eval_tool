@@ -16,14 +16,18 @@ export default class DetailedDisplay extends Component {
 
   render() {
     const data = this.props.data
-    return(
-      <tbody>
-      {
-        Object
-         .keys(data)
-         .map(this.renderDisplay)
-       }
-      </tbody>
-    )
+    if(data){
+	    return(
+	      <tbody>
+	      {
+	        Object
+	         .keys(data)
+	         .map(this.renderDisplay)
+	       }
+	      </tbody>
+	    )
+	} else {
+		return(<p>No data here.</p>)
+	}
   }
 }
