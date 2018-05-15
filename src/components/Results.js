@@ -27,7 +27,7 @@ export default class Results extends Component {
       <Table striped bordered condensed hover>
 		    <thead>
 			     <tr>
-				      <th>Page Url</th>
+				      <th>Website (linked to WAVE report)</th>
 				      <th scope="row" className="table-danger">Errors</th>
 				      <th scope="row" className="table-warning">Alert</th>
 				      <th scope="row" className="table-success">Feature</th>

@@ -55,11 +55,8 @@ export default class SearchForm extends Component {
             <option value="2">Summary and Detail (2 credits)</option>
           </FormControl>
         </FormGroup>
-        <FormGroup>
-      		<FormControl.Static>When entering URLs, do not put "http://" in front of them as the output links will be broken.</FormControl.Static>
-    	</FormGroup>
         <FormGroup controlId="formURLs">
-          <ControlLabel>Websites</ControlLabel>
+          <ControlLabel>Websites (separated by new lines)</ControlLabel>
           <FormControl
             componentClass="textarea"
             placeholder="urls"
@@ -69,6 +66,7 @@ export default class SearchForm extends Component {
         </FormGroup>
         <button id="submit" type="submit" className="btn btn-primary">Submit</button>
       </Form>
+      <br/><br/>
       </div>
     )
   }
