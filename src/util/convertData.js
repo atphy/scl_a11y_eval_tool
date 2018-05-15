@@ -8,6 +8,35 @@
 import { map } from 'lodash'
 import moment from 'moment'
 
+var toAddHTML = "";
+
+const waitforDocs = (id) => {
+	return new Promise((resolve) => {
+		getDocs(id);
+	});
+}
+
+function getDocs(id) {
+	var request = new XMLHttpRequest();
+    request.open('GET', `http://wave.webaim.org/api/docs?id=${id}`, true);
+	request.onload = function () {
+		var data = JSON.parse(this.response);
+			if (request.status >= 200 && request.status < 400) {
+				var gs = data.guidelines;
+				console.log(gs);
+				for (var i = 0, len = gs.length; i < len; i++){
+					var t = gs[i];
+					console.log(t);
+					console.log(t.link);
+					console.log(t.name);
+					toAddHTML += `<a href="${t.link}" target="_blank">${t.name}</a>; `;
+				}
+			}
+	}
+	request.send();
+	return("2");
+}
+
 
 /**
  * Converts summary report data to CSV format
@@ -141,7 +170,7 @@ function toHTMLSummary(data) {
  * @param  {array} data - detailed report data
  * @return {blob} blob of converted HTML data
  */
-function toHTMLDetailed(data) {
+async function toHTMLDetailed(data) {
   // TODO: refactor this...don't repeat the same snippet from up above
   let htmlData = `<!doctype html>
     <html lang="en">
@@ -209,51 +238,127 @@ function toHTMLDetailed(data) {
            <th scope="col" style="width:79pt">Item ID</th>
            <th scope="col" style="width:30pt">Count</th>
            <th scope="col" style="width:93pt">Description</th>
+           <th scope="col" style="width:93pt">Guidelines</th>
           </tr>
         </thead>
         <tbody>`;
 
-      map(site.categories.error.items, (item) => {
+      map(site.categories.error.items, async (item) => {
         htmlData += `<tr class="errors">
           <td>Error</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
-          <td>${item.description}</td></tr>`;
+          <td>${item.description}</td><td>errors`;
+        await waitforDocs(item.id);
+		// const myPromise = getDocs(item.id);
+		// myPromise.then(function addHTMLhere(){console.log("MADE IT BITCH"); toAddHTML = getDocs(item.id);});
+		htmlData += toAddHTML;
+        htmlData += `</td></tr>`;
       });
       map(site.categories.alert.items, (item) => {
         htmlData += `<tr class="alerts">
           <td>Alert</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
-          <td>${item.description}</td></tr>`;
+          <td>${item.description}</td><td>`;
+        var request = new XMLHttpRequest();
+        request.open('GET', `http://wave.webaim.org/api/docs?id=${item.id}`, true);
+		request.onload = function () {
+			var data = JSON.parse(this.response);
+  			if (request.status >= 200 && request.status < 400) {
+  				var gs = data.guidelines;
+  				for (var i = 0, len = gs.length; i < len; i++){
+  					var t = gs[i];
+  					htmlData += `<a href=${t.link} target="_blank">${t.name}</a>;`;
+  				}
+  			}
+		}
+		request.send();
+        htmlData += `</td></tr>`;
       });
       map(site.categories.feature.items, (item) => {
         htmlData += `<tr class="features">
           <td>Feature</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
-          <td>${item.description}</td></tr>`;
+          <td>${item.description}</td><td>`;
+        var request = new XMLHttpRequest();
+        request.open('GET', `http://wave.webaim.org/api/docs?id=${item.id}`, true);
+		request.onload = function () {
+			var data = JSON.parse(this.response);
+  			if (request.status >= 200 && request.status < 400) {
+  				var gs = data.guidelines;
+  				for (var i = 0, len = gs.length; i < len; i++){
+  					var t = gs[i];
+  					htmlData += `<a href=${t.link} target="_blank">${t.name}</a>;`;
+  				}
+  			}
+		}
+		request.send();
+        htmlData += `</td></tr>`;
       });
       map(site.categories.structure.items, (item) => {
         htmlData += `<tr class="structure">
           <td>Structure</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
-          <td>${item.description}</td></tr>`;
+          <td>${item.description}</td><td>`;
+        var request = new XMLHttpRequest();
+        request.open('GET', `http://wave.webaim.org/api/docs?id=${item.id}`, true);
+		request.onload = function () {
+			var data = JSON.parse(this.response);
+  			if (request.status >= 200 && request.status < 400) {
+  				var gs = data.guidelines;
+  				for (var i = 0, len = gs.length; i < len; i++){
+  					var t = gs[i];
+  					htmlData += `<a href=${t.link} target="_blank">${t.name}</a>;`;
+  				}
+  			}
+		}
+		request.send();
+        htmlData += `</td></tr>`;
       });
       map(site.categories.html5.items, (item) => {
         htmlData += `<tr class="html5">
           <td>HTML5 and ARIA</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
-          <td>${item.description}</td></tr>`;
+          <td>${item.description}</td><td>`;
+        var request = new XMLHttpRequest();
+        request.open('GET', `http://wave.webaim.org/api/docs?id=${item.id}`, true);
+		request.onload = function () {
+			var data = JSON.parse(this.response);
+  			if (request.status >= 200 && request.status < 400) {
+  				var gs = data.guidelines;
+  				for (var i = 0, len = gs.length; i < len; i++){
+  					var t = gs[i];
+  					htmlData += `<a href=${t.link} target="_blank">${t.name}</a>;`;
+  				}
+  			}
+		}
+		request.send();
+        htmlData += `</td></tr>`;
       });
       map(site.categories.contrast.items, (item) => {
         htmlData += `<tr class="contrast">
           <td>Contrast</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
-          <td>${item.description}</td></tr>`;
+          <td>${item.description}</td><td>`;
+        var request = new XMLHttpRequest();
+        request.open('GET', `http://wave.webaim.org/api/docs?id=${item.id}`, true);
+		request.onload = function () {
+			var data = JSON.parse(this.response);
+  			if (request.status >= 200 && request.status < 400) {
+  				var gs = data.guidelines;
+  				for (var i = 0, len = gs.length; i < len; i++){
+  					var t = gs[i];
+  					htmlData += `<a href=${t.link} target="_blank">${t.name}</a>;`;
+  				}
+  			}
+		}
+		request.send();
+        htmlData += `</td></tr>`;
       });
     }
   });
@@ -297,10 +402,11 @@ export function toCSV(data, scanType) {
  * @param  {number} scanType - Scan type: 1 for summary or 2 for detailed
  * @return {blob} blob of converted HTML data
  */
-export function toHTML(data, scanType) {
+export async function toHTML(data, scanType) {
   if (scanType === '1') {
     return toHTMLSummary(data);
   } else if (scanType === '2') {
+  	await toHTMLDetailed(data);
     return toHTMLDetailed(data);
   }
 
