@@ -117,7 +117,7 @@ function toHTMLSummary(data) {
   map(data, (site) => {
     if (site.status.success === true) {
       htmlData += `<tr>
-        <td scope="row"><a href="http://${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
+        <td scope="row"><a href="${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
         <td>${site.categories.error.count}</td>
         <td>${site.categories.alert.count}</td>
         <td>${site.categories.feature.count}</td>
@@ -185,7 +185,7 @@ function toHTMLDetailed(data) {
   map(data, (site) => {
     if (site.status.success === true) {
       htmlData += `<tr class="sum">
-        <td scope="row"><a href="http://${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
+        <td scope="row"><a href="${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
         <td>${site.categories.error.count}</td>
         <td>${site.categories.alert.count}</td>
         <td>${site.categories.feature.count}</td>
@@ -215,7 +215,7 @@ function toHTMLDetailed(data) {
 
       map(site.categories.error.items, (item) => {
         htmlData += `<tr class="errors">
-          <td scope="row"><a href="http://${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
+          <td scope="row"><a href="${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
           <td>Error</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
@@ -223,7 +223,7 @@ function toHTMLDetailed(data) {
       });
       map(site.categories.alert.items, (item) => {
         htmlData += `<tr class="alerts">
-          <td scope="row"><a href="http://${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
+          <td scope="row"><a href="${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
           <td>Alert</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
@@ -231,7 +231,7 @@ function toHTMLDetailed(data) {
       });
       map(site.categories.feature.items, (item) => {
         htmlData += `<tr class="features">
-          <td scope="row"><a href="http://${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
+          <td scope="row"><a href="${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
           <td>Feature</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
@@ -239,7 +239,7 @@ function toHTMLDetailed(data) {
       });
       map(site.categories.structure.items, (item) => {
         htmlData += `<tr class="structure">
-          <td scope="row"><a href="http://${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
+          <td scope="row"><a href="${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
           <td>Structure</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
@@ -247,7 +247,7 @@ function toHTMLDetailed(data) {
       });
       map(site.categories.html5.items, (item) => {
         htmlData += `<tr class="html5">
-          <td scope="row"><a href="http://${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
+          <td scope="row"><a href="${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
           <td>HTML5 and ARIA</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
@@ -255,7 +255,7 @@ function toHTMLDetailed(data) {
       });
       map(site.categories.contrast.items, (item) => {
         htmlData += `<tr class="contrast">
-          <td scope="row"><a href="http://${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
+          <td scope="row"><a href="${site.statistics.pageurl}" target="_blank">${site.statistics.pageurl}</a></td>
           <td>Contrast</td>
           <td>${item.id}</td>
           <td>${item.count}</td>
