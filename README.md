@@ -1,7 +1,8 @@
 ## Smith College Libraries A11y Evaluation Tool
 This tool uses the [WebAim API](https://wave.webaim.org/api/) to allow you to batch test the accessibility of multiple websites.  This tools is built with React and uses React-Bootstrap for layout.
 
-A demo of this tool can be found at https://libtools.smith.edu/development/accessibility/
+A demo of this tool can be found at https://libtools.smith.edu/development/accessibility/. 
+
 For the user documentation, read [USER-README.md](USER-README.md).
 
 ## Installation
