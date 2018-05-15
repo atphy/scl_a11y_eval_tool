@@ -1,0 +1,150 @@
+[
+  {
+    "status": {
+      "success": true,
+      "httpstatuscode": 301
+    },
+    "statistics": {
+      "pagetitle": "www.fivecolleges.edu",
+      "pageurl": "http://fivecolleges.edu",
+      "time": "1.92",
+      "creditsremaining": 1462,
+      "allitemcount": 69,
+      "totalelements": 395,
+      "waveurl": "http://wave.webaim.org/report?url=http://fivecolleges.edu"
+    },
+    "categories": {
+      "error": {
+        "description": "Errors",
+        "count": 1,
+        "items": {
+          "link_empty": {
+            "count": 1,
+            "description": "Empty link",
+            "id": "link_empty"
+          }
+        }
+      },
+      "contrast": {
+        "description": "Contrast Errors",
+        "count": 1,
+        "items": {
+          "contrast": {
+            "count": 1,
+            "description": "Very Low Contrast",
+            "id": "contrast"
+          }
+        }
+      },
+      "alert": {
+        "description": "Alerts",
+        "count": 31,
+        "items": {
+          "event_handler": {
+            "count": 6,
+            "description": "Device dependent event handler",
+            "id": "event_handler"
+          },
+          "link_internal_broken": {
+            "count": 4,
+            "description": "Broken same-page link",
+            "id": "link_internal_broken"
+          },
+          "link_pdf": {
+            "count": 1,
+            "description": "Link to PDF document",
+            "id": "link_pdf"
+          },
+          "link_suspicious": {
+            "count": 6,
+            "description": "Suspicious link text",
+            "id": "link_suspicious"
+          },
+          "title_redundant": {
+            "count": 8,
+            "description": "Redundant title text",
+            "id": "title_redundant"
+          },
+          "underline": {
+            "count": 6,
+            "description": "Underlined text",
+            "id": "underline"
+          }
+        }
+      },
+      "feature": {
+        "description": "Features",
+        "count": 15,
+        "items": {
+          "alt_link": {
+            "count": 8,
+            "description": "Linked image with alternative text",
+            "id": "alt_link"
+          },
+          "alt_null": {
+            "count": 6,
+            "description": "Null or empty alternative text",
+            "id": "alt_null"
+          },
+          "label": {
+            "count": 1,
+            "description": "Form label",
+            "id": "label"
+          }
+        }
+      },
+      "structure": {
+        "description": "Structural Elements",
+        "count": 12,
+        "items": {
+          "h1": {
+            "count": 1,
+            "description": "Heading level 1",
+            "id": "h1"
+          },
+          "h2": {
+            "count": 2,
+            "description": "Heading level 2",
+            "id": "h2"
+          },
+          "h3": {
+            "count": 4,
+            "description": "Heading level 3",
+            "id": "h3"
+          },
+          "iframe": {
+            "count": 3,
+            "description": "Inline Frame",
+            "id": "iframe"
+          },
+          "ul": {
+            "count": 2,
+            "description": "Unordered list",
+            "id": "ul"
+          }
+        }
+      },
+      "html5": {
+        "description": "HTML5 and ARIA",
+        "count": 9,
+        "items": {
+          "html5_footer": {
+            "count": 1,
+            "description": "Footer",
+            "id": "html5_footer"
+          },
+          "html5_header": {
+            "count": 1,
+            "description": "Header",
+            "id": "html5_header"
+          },
+          "html5_nav": {
+            "count": 7,
+            "description": "Navigation",
+            "id": "html5_nav"
+          }
+        }
+      }
+    }
+  }
+]
