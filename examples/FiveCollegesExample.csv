@@ -3,7 +3,7 @@
 SITE URL,ERRORS,ALERTS,FEATURES,STRUCTURE,HTML5 AND ARIA,CONTRAST
 http://fivecolleges.edu,1,31,15,12,9,1
 
-"WAVE accessibility detailed report: May 15th 2018, 2:52pm"
+"WAVE accessibility detailed report: May 15th 2018, 2:52pm",,,,,,
 
 URL,ITEM TYPE,ITEM ID,COUNT,DESCRIPTION
 http://fivecolleges.edu,Error,link_empty,1,Empty link
