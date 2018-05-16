@@ -4,10 +4,11 @@ import { Table } from 'react-bootstrap'
 export default class DetailedDisplay extends Component {
 
   renderDisplay = (key) => {
-    const data = this.props.data[key]
+    const data = this.props.data[key];
+    const link = "details.html?attr="+data.id;
     return(
       <tr key={key}>
-        <td>{data.id}</td>
+        <td><a href={link} target='_blank'>{data.id}</a></td>
         <td>{data.count}</td>
         <td>{data.description}</td>
       </tr>
