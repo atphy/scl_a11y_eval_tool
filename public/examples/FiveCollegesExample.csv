@@ -1,28 +1,28 @@
-"WAVE accessibility summary report: May 15th 2018, 2:52pm"
-,,,,,,
+"WAVE accessibility summary report: May 15th 2018, 2:52pm",,,,,,
+
 SITE URL,ERRORS,ALERTS,FEATURES,STRUCTURE,HTML5 AND ARIA,CONTRAST
 http://fivecolleges.edu,1,31,15,12,9,1
 
-"WAVE accessibility detailed report: May 15th 2018, 2:52pm"
+"WAVE accessibility detailed report: May 15th 2018, 2:52pm",,,,,,
 
-URL,ITEM TYPE,ITEM ID,COUNT,DESCRIPTION
-http://fivecolleges.edu,Error,link_empty,1,Empty link
-http://fivecolleges.edu,Alert,event_handler,6,Device dependent event handler
-http://fivecolleges.edu,Alert,link_internal_broken,4,Broken same-page link
-http://fivecolleges.edu,Alert,link_pdf,1,Link to PDF document
-http://fivecolleges.edu,Alert,link_suspicious,6,Suspicious link text
-http://fivecolleges.edu,Alert,title_redundant,8,Redundant title text
-http://fivecolleges.edu,Alert,underline,6,Underlined text
-http://fivecolleges.edu,Feature,alt_link,8,Linked image with alternative text
-http://fivecolleges.edu,Feature,alt_null,6,Null or empty alternative text
-http://fivecolleges.edu,Feature,label,1,Form label
-http://fivecolleges.edu,Structure,h1,1,Heading level 1
-http://fivecolleges.edu,Structure,h2,2,Heading level 2
-http://fivecolleges.edu,Structure,h3,4,Heading level 3
-http://fivecolleges.edu,Structure,iframe,3,Inline Frame
-http://fivecolleges.edu,Structure,ul,2,Unordered list
-http://fivecolleges.edu,HTML5 and ARIA,html5_footer,1,Footer
-http://fivecolleges.edu,HTML5 and ARIA,html5_header,1,Header
-http://fivecolleges.edu,HTML5 and ARIA,html5_nav,7,Navigation
-http://fivecolleges.edu,Contrast,contrast,1,Very Low Contrast
+URL,ITEM TYPE,ITEM ID,COUNT,DESCRIPTION,,
+http://fivecolleges.edu,Error,link_empty,1,Empty link,,
+http://fivecolleges.edu,Alert,event_handler,6,Device dependent event handler,,
+http://fivecolleges.edu,Alert,link_internal_broken,4,Broken same-page link,,
+http://fivecolleges.edu,Alert,link_pdf,1,Link to PDF document,,
+http://fivecolleges.edu,Alert,link_suspicious,6,Suspicious link text,,
+http://fivecolleges.edu,Alert,title_redundant,8,Redundant title text,,
+http://fivecolleges.edu,Alert,underline,6,Underlined text,,
+http://fivecolleges.edu,Feature,alt_link,8,Linked image with alternative text,,
+http://fivecolleges.edu,Feature,alt_null,6,Null or empty alternative text,,
+http://fivecolleges.edu,Feature,label,1,Form label,,
+http://fivecolleges.edu,Structure,h1,1,Heading level 1,,
+http://fivecolleges.edu,Structure,h2,2,Heading level 2,,
+http://fivecolleges.edu,Structure,h3,4,Heading level 3,,
+http://fivecolleges.edu,Structure,iframe,3,Inline Frame,,
+http://fivecolleges.edu,Structure,ul,2,Unordered list,,
+http://fivecolleges.edu,HTML5 and ARIA,html5_footer,1,Footer,,
+http://fivecolleges.edu,HTML5 and ARIA,html5_header,1,Header,,
+http://fivecolleges.edu,HTML5 and ARIA,html5_nav,7,Navigation,,
+http://fivecolleges.edu,Contrast,contrast,1,Very Low Contrast,,
 
