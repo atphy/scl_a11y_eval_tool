@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/cosmo/bootstrap.min.css">
+    <title>Smith College Accessibility Tool</title>
+    <style>
+      .error {background-color:#f2dede;color:#a94442;}
+      .alert {background-color:#fcf8e3;color:#8a6d3b;}
+      .feature {background-color:#dff0d8;color:#3c763d;}
+      .structure {background-color:#d9edf7;color:#31708f;}
+      .html5 {background-color:#e8eaf8;color:#656789;}
+      .contrast {background-color:#ffffff;color:#000000;}
+    </style>
+  </head>
+  <body>
+  	<script>
+      var toAddHTML = "";
+      function getQueryVariable(variable){
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i=0;i<vars.length;i++) {
+          var pair = vars[i].split("=");
+          if(pair[0] == variable){return pair[1];}
+        }
+        return(false);
+      }
+      /*Code adapted from Diogo Spinola's tutorial at https://medium.freecodecamp.org/javascript-from-callbacks-to-async-await-1cc090ddad99*/
+      function request(url) {
+        return new Promise(function(resolve, reject) {
+          const xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function(e) {
+            if (xhr.readyState === 4) {
+              if (xhr.status === 200) {
+                resolve(xhr.response)
+              } else {
+                reject(xhr.status)
+              }
+            }
+          }
+          xhr.ontimeout = function () {
+            reject('timeout')
+          }
+          xhr.open('get', url, true)
+          xhr.send()
+        })
+      }
+      function getDocs(id) {
+        var request = new XMLHttpRequest();
+        request.open('GET', `http://wave.webaim.org/api/docs?id=${id}`, true);
+        request.onload = function () {
+          var data = JSON.parse(this.response);
+            if (request.status >= 200 && request.status < 400) {
+              var gs = data.guidelines;
+              console.log(gs);
+              for (var i = 0, len = gs.length; i < len; i++){
+                var t = gs[i];
+                console.log(t);
+                console.log(t.link);
+                console.log(t.name);
+                toAddHTML += `<a href="${t.link}" target="_blank">${t.name}</a>; `;
+              }
+            }
+        }
+        request.send();
+        return(toAddHTML);
+      }
+
+      const attribute = getQueryVariable('attr');
+      const attrGet = `http://wave.webaim.org/api/docs?id=${attribute}`;
+      async function makeDetails(attrGet = false) {
+        const detailsJSON = await request(attrGet)
+        const ds = JSON.parse(detailsJSON)
+        toAddHTML += `<h1 class="${ds.type}" style="padding:5px;">${ds.type.charAt(0).toUpperCase() + ds.type.slice(1)}: ${ds.title}</h1>`;
+        toAddHTML += `<h3>${ds.summary}</h3> `;
+        toAddHTML += `<p>${ds.purpose}</p>`;
+        toAddHTML += `<h3>How to fix: </h3><p>${ds.actions}</p>`;
+        var gs = ds.guidelines;
+        toAddHTML += `<h3> Standards and Guidelines: </h3>`
+        if(gs.link){
+          toAddHTML += `<a href="${gs.link}" target="_blank">${gs.name}</a>`;
+        }
+        for (var i = 0; i < gs.length; i++){
+          var t = gs[i];
+          toAddHTML += `<a href="${t.link}" target="_blank">${t.name}</a>`;
+          if(i < gs.length){
+            toAddHTML += '<br/>';
+          }
+        }
+        toAddHTML += '<br/><br/><br/><a href="javascript: self.close()">Close this Window</a>';
+        document.getElementById("details").innerHTML = toAddHTML;
+      }
+
+      makeDetails(attrGet);
+
+    </script>
+    <div id="details" style="padding:5%"></div>
+  </body>
+</html>

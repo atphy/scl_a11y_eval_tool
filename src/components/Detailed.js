@@ -21,7 +21,7 @@ export default class Detailed extends Component {
     return(
       <div className="card" key={key}>
         <div className="card-header">
-          <a href={data.statistics.waveurl} target="_blank">{data.statistics.pageurl}</a>
+          <a href={data.statistics.waveurl} target="_blank">{data.statistics.pageurl}</a><br/> The links in the tables below lead to pages with more information about each item.
         </div>     
       <div className="card-body">
         <div className="table-responsive">
