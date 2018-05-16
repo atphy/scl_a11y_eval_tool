@@ -147,7 +147,7 @@ export default class Main extends Component {
           <main className="col-sm-8 ml-sm-auto col-md-9 pt-3" role="main">
             <h1 className="main-summary">Summary Report</h1>
             <div className="alert alert-dark" role="alert">
-              <span className="message">This tool leverages the <a href="http://wave.webaim.org/api/">WAVE API</a> developed by <a href="http://webaim.org/">WebAIM</a>. Please visit their websites to learn more about web accessibility and to purchase API credits.</span>
+              <span className="message">This tool leverages the <a href="http://wave.webaim.org/api/">WAVE API</a> developed by <a href="http://webaim.org/">WebAIM</a>. Please visit their websites to learn more about web accessibility and to purchase API credits. <a href='docs.html' target='_blank'>Read the User Documentation.</a></span>
             </div>
             {
               this.state.exportDisplay ?
