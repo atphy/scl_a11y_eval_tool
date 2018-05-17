@@ -10,9 +10,11 @@ For the user documentation, read [USER-README.md](public/USER-README.md).
 2. Make sure to have [Yarn](https://yarnpkg.com/en/) installed.
 3. In command line, go to the repository folder and run:
 ```
-yarn install
-yarn start
+    yarn install
+    yarn start
 ```
+4. If a window hasn't automatically opened, go to `localhost:3000` in your web browser.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 You can [find the most recent version of the React guide here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
