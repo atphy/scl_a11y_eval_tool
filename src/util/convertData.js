@@ -202,7 +202,7 @@ function toHTMLDetailed(data) {
   map(data, (site) => {
     if (site.status.success === true) {
       htmlData += `<table>
-        <caption>WAVE accessibility detailed report for <a href="${site.statistics.waveurl}" target="_blank">${site.statistics.pageurl}</a>: ${moment().format('MMMM Do YYYY, h:mma')}</caption>
+        <caption>WAVE accessibility detailed report for <a href="${site.statistics.waveurl}" target="_blank">${site.statistics.pageurl}</a>: ${moment().format('MMMM Do YYYY, h:mma')}<br/>If you downloaded details.html from the site, clicking on the ID links will bring you to a page with more information about each item.</caption>
         <thead>
           <tr>
            <th scope="col" style="width:79pt">Item Type</th>

@@ -28,7 +28,7 @@ export default class DetailedDisplay extends Component {
 	      </tbody>
 	    )
 	} else {
-		return(<p>No data here.</p>)
+		return(<p>No data here. Only a basic report was run.</p>)
 	}
   }
 }
