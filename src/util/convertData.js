@@ -216,42 +216,42 @@ function toHTMLDetailed(data) {
       map(site.categories.error.items, (item) => {
         htmlData += `<tr class="errors">
           <td>Error</td>
-          <td>${item.id}</td>
+          <td><a href='details.html?attr=${item.id}' target='_blank'>${item.id}</a></td>
           <td>${item.count}</td>
           <td>${item.description}</td></tr>`;
       });
       map(site.categories.alert.items, (item) => {
         htmlData += `<tr class="alerts">
           <td>Alert</td>
-          <td>${item.id}</td>
+          <td><a href='details.html?attr=${item.id}' target='_blank'>${item.id}</a></td>
           <td>${item.count}</td>
           <td>${item.description}</td></tr>`;
       });
       map(site.categories.feature.items, (item) => {
         htmlData += `<tr class="features">
           <td>Feature</td>
-          <td>${item.id}</td>
+          <td><a href='details.html?attr=${item.id}' target='_blank'>${item.id}</a></td>
           <td>${item.count}</td>
           <td>${item.description}</td></tr>`;
       });
       map(site.categories.structure.items, (item) => {
         htmlData += `<tr class="structure">
           <td>Structure</td>
-          <td>${item.id}</td>
+          <td><a href='details.html?attr=${item.id}' target='_blank'>${item.id}</a></td>
           <td>${item.count}</td>
           <td>${item.description}</td></tr>`;
       });
       map(site.categories.html5.items, (item) => {
         htmlData += `<tr class="html5">
           <td>HTML5 and ARIA</td>
-          <td>${item.id}</td>
+          <td><a href='details.html?attr=${item.id}' target='_blank'>${item.id}</a></td>
           <td>${item.count}</td>
           <td>${item.description}</td></tr>`;
       });
       map(site.categories.contrast.items, (item) => {
         htmlData += `<tr class="contrast">
           <td>Contrast</td>
-          <td>${item.id}</td>
+          <td><a href='details.html?attr=${item.id}' target='_blank'>${item.id}</a></td>
           <td>${item.count}</td>
           <td>${item.description}</td></tr>`;
       });

@@ -15,7 +15,7 @@ The Github Repository for this project currently resides at https://github.com/a
 
 ## WAVE Accessibility Checker
 
-WAVE is a project created by [WebAIM](http://webaim.org) that can automatically check webpages for accessibility compliance. It uses a range of guidelines, focusing on [WCAG 2.0](https://www.w3.org/TR/WCAG20/). It is a good starting point to check accessibility of websites, but as an automated tool it can't catch everything and the results need to be reviewed manually. We also suggest using other checkers, like [aXe](https://www.deque.com/axe/), to run further tests.
+WAVE is a project created by [WebAIM](http://webaim.org) that can automatically check webpages for accessibility compliance. It uses a range of guidelines, focusing on [WCAG 2.0](https://www.w3.org/WAI/WCAG20/quickref/). It is a good starting point to check accessibility of websites, but as an automated tool it can't catch everything and the results need to be reviewed manually. We also suggest using other checkers, like [aXe](https://www.deque.com/axe/), to run further tests.
 
 # Usage
 

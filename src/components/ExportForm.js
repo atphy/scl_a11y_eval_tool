@@ -42,6 +42,9 @@ export default class ExportForm extends Component {
             inputRef={(input) => this.fileName = input}
           />
         </FormGroup>
+        <FormGroup>
+          <FormControl.Static>To get a fully featured HTML export, also <a href="details.html" download>download details.html</a> and place it in the same folder as your HTML download.</FormControl.Static>
+        </FormGroup>
         <button id="submit" type="submit" className="btn btn-primary">Submit</button>
       </Form>
       </div>
