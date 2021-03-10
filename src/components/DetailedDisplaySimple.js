@@ -15,7 +15,7 @@ export default class DetailedDisplaySimple extends Component {
            data.description === 'Alerts' ? 'table-warning' :
            data.description === 'Features' ? 'table-success' :
            data.description === 'Structural Elements' ? 'table-primary' :
-           data.description === 'HTML5 and ARIA' ? 'table-info' :
+           data.description === 'ARIA and HTML5' ? 'table-info' :
            data.description === 'Contrast Errors' ? 'table-secondary' : ''
          }>
             <th scope="row">{data.description}</th>

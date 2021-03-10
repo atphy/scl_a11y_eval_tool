@@ -15,7 +15,7 @@ export default class Results extends Component {
       <td>{data.categories.alert.count}</td>
       <td>{data.categories.feature.count}</td>
       <td>{data.categories.structure.count}</td>
-      <td>{data.categories.html5.count}</td>
+      <td>{data.categories.aria.count}</td>
       <td>{data.categories.contrast.count}</td>
     </tr>
   )

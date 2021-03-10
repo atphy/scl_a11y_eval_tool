@@ -1,15 +1,16 @@
 # Table of Contents
 
-* [Overview](#overview)
-	* [WAVE Accessibility Checker](#wave-accessibility-checker)
-* [Usage](#usage)
-	* [Reports](#reports)
-	* [Export](#export)
-* [Interpreting Results](#interpreting-results)
+- [Table of Contents](#table-of-contents)
+- [Overview](#overview)
+	- [WAVE Accessibility Checker](#wave-accessibility-checker)
+- [Usage](#usage)
+	- [Reports](#reports)
+	- [Export](#export)
+- [Interpreting Results](#interpreting-results)
 
 
 # Overview
-This Accessibility Tool is used to batch-test files for accessibility with the WAVE checker, created by [WebAIM](http://webaim.org). It uses the [WAVE API](https://wave.webaim.org/api/). Once the tool is run, it generates reports in CSV, HTML, and JSON formats. There are two options for these reports - Summary and Details. The Summary report shows the numbers of errors, alerts, features, structure elements, HTML5 and ARIA elements, and contrast violations on a given page. The Detailed report goes further and lists the details of each item that has been flagged by WAVE (ex. "Missing alt text") along with how many of each there are on the page.
+This Accessibility Tool is used to batch-test files for accessibility with the WAVE checker, created by [WebAIM](http://webaim.org). It uses the [WAVE API](https://wave.webaim.org/api/). Once the tool is run, it generates reports in CSV, HTML, and JSON formats. There are two options for these reports - Summary and Details. The Summary report shows the numbers of errors, alerts, features, structure elements, ARIA and HTML5 elements, and contrast violations on a given page. The Detailed report goes further and lists the details of each item that has been flagged by WAVE (ex. "Missing alt text") along with how many of each there are on the page.
 
 The Github Repository for this project currently resides at https://github.com/alexroseb/scl_a11y_eval_tool.
 
