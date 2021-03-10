@@ -105,7 +105,7 @@ export default class Main extends Component {
       'Alerts',
       'Feature',
       'Structure',
-      'Html5',
+      'Aria',
       'Contrast'
     ];
     const set = data.map((value, index) =>
@@ -115,7 +115,7 @@ export default class Main extends Component {
         value.categories.alert.count,
         value.categories.feature.count,
         value.categories.structure.count,
-        value.categories.html5.count,
+        value.categories.aria.count,
         value.categories.contrast.count
       ]
     )

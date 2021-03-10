@@ -1,6 +1,6 @@
 "WAVE accessibility summary report: May 15th 2018, 2:52pm",,,,,,
 
-SITE URL,ERRORS,ALERTS,FEATURES,STRUCTURE,HTML5 AND ARIA,CONTRAST
+SITE URL,ERRORS,ALERTS,FEATURES,STRUCTURE,ARIA AND HTML5,CONTRAST
 http://fivecolleges.edu,1,31,15,12,9,1
 
 "WAVE accessibility detailed report: May 15th 2018, 2:52pm",,,,,,
@@ -21,8 +21,8 @@ http://fivecolleges.edu,Structure,h2,2,Heading level 2,,
 http://fivecolleges.edu,Structure,h3,4,Heading level 3,,
 http://fivecolleges.edu,Structure,iframe,3,Inline Frame,,
 http://fivecolleges.edu,Structure,ul,2,Unordered list,,
-http://fivecolleges.edu,HTML5 and ARIA,html5_footer,1,Footer,,
-http://fivecolleges.edu,HTML5 and ARIA,html5_header,1,Header,,
-http://fivecolleges.edu,HTML5 and ARIA,html5_nav,7,Navigation,,
+http://fivecolleges.edu,ARIA and HTML5,aria_footer,1,Footer,,
+http://fivecolleges.edu,ARIA and HTML5,aria_header,1,Header,,
+http://fivecolleges.edu,ARIA and HTML5,aria_nav,7,Navigation,,
 http://fivecolleges.edu,Contrast,contrast,1,Very Low Contrast,,
 

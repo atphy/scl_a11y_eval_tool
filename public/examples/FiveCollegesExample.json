@@ -124,24 +124,24 @@
           }
         }
       },
-      "html5": {
-        "description": "HTML5 and ARIA",
+      "aria": {
+        "description": "ARIA and HTML5",
         "count": 9,
         "items": {
-          "html5_footer": {
+          "aria_footer": {
             "count": 1,
             "description": "Footer",
-            "id": "html5_footer"
+            "id": "aria_footer"
           },
-          "html5_header": {
+          "aria_header": {
             "count": 1,
             "description": "Header",
-            "id": "html5_header"
+            "id": "aria_header"
           },
-          "html5_nav": {
+          "aria_nav": {
             "count": 7,
             "description": "Navigation",
-            "id": "html5_nav"
+            "id": "aria_nav"
           }
         }
       }

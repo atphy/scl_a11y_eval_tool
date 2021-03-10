@@ -15,10 +15,10 @@ import moment from 'moment'
  * @return {blob} blob of converted CSV data
  */
 function toCSVSummary(data) {
-  let csvData = `"WAVE accessibility summary report: ${moment().format('MMMM Do YYYY, h:mma')}"\nSITE URL,ERRORS,ALERTS,FEATURES,STRUCTURE,HTML5 AND ARIA,CONTRAST\n`;
+  let csvData = `"WAVE accessibility summary report: ${moment().format('MMMM Do YYYY, h:mma')}"\nSITE URL,ERRORS,ALERTS,FEATURES,STRUCTURE,ARIA AND HTML5,CONTRAST\n`;
   map(data, (site) => {
     if (site.status.success === true) {
-      csvData += `${site.statistics.pageurl},${site.categories.error.count},${site.categories.alert.count},${site.categories.feature.count},${site.categories.structure.count},${site.categories.html5.count},${site.categories.contrast.count}\n`;
+      csvData += `${site.statistics.pageurl},${site.categories.error.count},${site.categories.alert.count},${site.categories.feature.count},${site.categories.structure.count},${site.categories.aria.count},${site.categories.contrast.count}\n`;
     }
   });
 
@@ -33,13 +33,13 @@ function toCSVSummary(data) {
  * @return {blob} blob of converted CSV data
  */
 function toCSVDetailed(data) {
-  let csvData = `"WAVE accessibility summary report: ${moment().format('MMMM Do YYYY, h:mma')}"\nSITE URL,ERRORS,ALERTS,FEATURES,STRUCTURE,HTML5 AND ARIA,CONTRAST\n`;
+  let csvData = `"WAVE accessibility summary report: ${moment().format('MMMM Do YYYY, h:mma')}"\nSITE URL,ERRORS,ALERTS,FEATURES,STRUCTURE,ARIA AND HTML5,CONTRAST\n`;
 
   // TODO: refactor this...don't repeat the same snippet from up above
   map(data, (site) => {
     console.log(site)
     if (site.status.success === true) {
-      csvData += `${site.statistics.pageurl},${site.categories.error.count},${site.categories.alert.count},${site.categories.feature.count},${site.categories.structure.count},${site.categories.html5.count},${site.categories.contrast.count}\n`;
+      csvData += `${site.statistics.pageurl},${site.categories.error.count},${site.categories.alert.count},${site.categories.feature.count},${site.categories.structure.count},${site.categories.aria.count},${site.categories.contrast.count}\n`;
     }
   });
 
@@ -60,8 +60,8 @@ function toCSVDetailed(data) {
       map(site.categories.structure.items, (item) => {
         csvData += `${site.statistics.pageurl},Structure,${item.id},${item.count},${item.description}\n`;
       });
-      map(site.categories.html5.items, (item) => {
-        csvData += `${site.statistics.pageurl},HTML5 and ARIA,${item.id},${item.count},${item.description}\n`;
+      map(site.categories.aria.items, (item) => {
+        csvData += `${site.statistics.pageurl},ARIA and HTML5,${item.id},${item.count},${item.description}\n`;
       });
       map(site.categories.contrast.items, (item) => {
         csvData += `${site.statistics.pageurl},Contrast,${item.id},${item.count},${item.description}\n\n`;
@@ -96,7 +96,7 @@ function toHTMLSummary(data) {
       .th-alerts {background-color:#fcf8e3;color:#8a6d3b;}
       .th-features {background-color:#dff0d8;color:#3c763d;}
       .th-structure {background-color:#d9edf7;color:#31708f;}
-      .th-html5 {background-color:#e8eaf8;color:#656789;}
+      .th-aria {background-color:#e8eaf8;color:#656789;}
       .th-contrast {background-color:#ffffff;color:#000000;}
     </style>
     <body>
@@ -109,7 +109,7 @@ function toHTMLSummary(data) {
            <th class="th-alerts" scope="col" style="width:79pt">Alerts</th>
            <th class="th-features" scope="col" style="width:86pt">Features</th>
            <th class="th-structure" scope="col" style="width:93pt">Structure</th>
-           <th class="th-html5" scope="col" style="width:123pt">HTML5 and ARIA</th>
+           <th class="th-aria" scope="col" style="width:123pt">ARIA and HTML5</th>
            <th class="th-contrast" scope="col" style="width:87pt">Contrast</td>
           </tr>
         </thead>
@@ -123,7 +123,7 @@ function toHTMLSummary(data) {
         <td>${site.categories.alert.count}</td>
         <td>${site.categories.feature.count}</td>
         <td>${site.categories.structure.count}</td>
-        <td>${site.categories.html5.count}</td>
+        <td>${site.categories.aria.count}</td>
         <td>${site.categories.contrast.count}</td>
       </tr>`;
     }
@@ -158,13 +158,13 @@ function toHTMLDetailed(data) {
       .th-alerts {background-color:#fcf8e3;color:#8a6d3b;}
       .th-features {background-color:#dff0d8;color:#3c763d;}
       .th-structure {background-color:#d9edf7;color:#31708f;}
-      .th-html5 {background-color:#e8eaf8;color:#656789;}
+      .th-aria {background-color:#e8eaf8;color:#656789;}
       .th-contrast {background-color:#ffffff;color:#000000;}
       .errors {background-color:#f2dede;color:#a94442;}
       .alerts {background-color:#fcf8e3;color:#8a6d3b;}
       .features {background-color:#dff0d8;color:#3c763d;}
       .structure {background-color:#d9edf7;color:#31708f;}
-      .html5 {background-color:#e8eaf8;color:#656789;}
+      .aria {background-color:#e8eaf8;color:#656789;}
       .contrast {background-color:#ffffff;color:#000000;}
     </style>
     <body>
@@ -177,7 +177,7 @@ function toHTMLDetailed(data) {
            <th class="th-alerts" scope="col" style="width:79pt">Alerts</th>
            <th class="th-features" scope="col" style="width:86pt">Features</th>
            <th class="th-structure" scope="col" style="width:93pt">Structure</th>
-           <th class="th-html5" scope="col" style="width:123pt">HTML5 and ARIA</th>
+           <th class="th-aria" scope="col" style="width:123pt">ARIA and HTML5</th>
            <th class="th-contrast" scope="col" style="width:87pt">Contrast</td>
           </tr>
         </thead>
@@ -191,7 +191,7 @@ function toHTMLDetailed(data) {
         <td>${site.categories.alert.count}</td>
         <td>${site.categories.feature.count}</td>
         <td>${site.categories.structure.count}</td>
-        <td>${site.categories.html5.count}</td>
+        <td>${site.categories.aria.count}</td>
         <td>${site.categories.contrast.count}</td>
       </tr>`;
     }
@@ -241,9 +241,9 @@ function toHTMLDetailed(data) {
           <td>${item.count}</td>
           <td>${item.description}</td></tr>`;
       });
-      map(site.categories.html5.items, (item) => {
-        htmlData += `<tr class="html5">
-          <td>HTML5 and ARIA</td>
+      map(site.categories.aria.items, (item) => {
+        htmlData += `<tr class="aria">
+          <td>ARIA and HTML5</td>
           <td><a href='details.html?attr=${item.id}' target='_blank'>${item.id}</a></td>
           <td>${item.count}</td>
           <td>${item.description}</td></tr>`;
