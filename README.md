@@ -9,11 +9,11 @@ For the user documentation, read [USER-README.md](public/USER-README.md).
 
 ## Installation
 1. Clone this repository
-2. Make sure to have [Yarn](https://yarnpkg.com/en/) installed.
+2. Make sure to have npm installed.
 3. In command line, go to the repository folder and run:
 ```
-    yarn install
-    yarn start
+    npm i
+    npm start
 ```
 4. If a window hasn't automatically opened, go to `localhost:3000` in your web browser.
 
